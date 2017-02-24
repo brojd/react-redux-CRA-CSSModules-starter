@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router'
+import { IndexLink, Link } from 'react-router';
+import styles from './Nav.stylesheet.css';
 
 const Nav = () =>
-  <nav>
-    <Link to={'/'}>TodoApp</Link>
-    <Link to={'/about'}>About</Link>
+  <nav className={styles.Nav}>
+    <IndexLink to={'/'} className={styles.link} activeClassName={styles.activeLink}>TodoApp</IndexLink>
+    <Link to={'/about'} className={styles.link} activeClassName={styles.activeLink}>About</Link>
   </nav>;
 
 export default Nav;
