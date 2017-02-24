@@ -1,14 +1,16 @@
 import React from 'react';
-import styles from './App.stylesheet.scss';
+import styles from './App.stylesheet.css';
 import Header from '../Header/Header.component';
 import Nav from '../Nav/Nav.component';
 import Footer from '../Footer/Footer.component';
 
 const App = ({ children }) =>
-  <section className={styles.red}>
+  <section className={styles.App}>
     <Header />
     <Nav />
-    {children}
+    <main className={styles.main}>
+      {children}
+    </main>
     <Footer />
   </section>;
 

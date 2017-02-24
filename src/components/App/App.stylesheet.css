@@ -1,4 +1,10 @@
-.red {
-  background: blue; }
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #ffffff, #bfd6dc); }
 
-/*# sourceMappingURL=Modules.css.map */
+.main {
+  flex: 1; }
+
+/*# sourceMappingURL=App.stylesheet.css.map */
