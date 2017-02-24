@@ -5,6 +5,8 @@
   background: linear-gradient(to bottom, #f1f1f1, #bfd6dc); }
 
 .main {
-  flex: 1; }
+  flex: 1;
+  width: 80%;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=App.stylesheet.css.map */

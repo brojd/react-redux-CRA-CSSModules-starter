@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styles from './AddTodo.stylesheet.css';
 
 class AddTodo extends Component {
   
@@ -23,9 +24,14 @@ class AddTodo extends Component {
   
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" onChange={this.handleChange} value={this.state.todoName} name="name" />
-        <button type="submit">Add task</button>
+      <form onSubmit={this.handleSubmit} className={styles.AddTodo}>
+        <input type="text"
+               onChange={this.handleChange}
+               value={this.state.todoName}
+               name="name"
+               className={styles.nameInput}
+               placeholder="Enter name..." />
+        <button type="submit" className={styles.submitButton}>Add task</button>
       </form>
     );
   }
