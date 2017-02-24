@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import styles from './TodoList.stylesheet.css';
 
 const TodoList = ({ todos, onTodoClick }) => {
   
@@ -7,9 +8,13 @@ const TodoList = ({ todos, onTodoClick }) => {
   };
   
   return (
-    <ul>
+    <ul className={styles.TodoList}>
       {todos.map((todo, index) => (
-        <li key={index} onClick={() => handleTodoClick(todo.id)}>{todo.name}</li>
+        <li key={index}
+            onClick={() => handleTodoClick(todo.id)}
+            className={styles.todo}>
+          {index + 1}. {todo.name}
+        </li>
       ))}
     </ul>
   );

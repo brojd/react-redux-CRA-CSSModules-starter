@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import styles from './FilterTodos.stylesheet.css';
 
 const FilterTodos = ({ filters, onFilterChosen }) => {
   
@@ -7,7 +8,7 @@ const FilterTodos = ({ filters, onFilterChosen }) => {
   };
   
   return (
-    <ul>
+    <ul className={styles.FilterTodos}>
       {filters.map((filter, index) => (
         <button key={index} onClick={() => handleFilterChosen(filter)}>
           {filter}
