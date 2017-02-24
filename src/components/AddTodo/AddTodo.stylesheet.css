@@ -13,8 +13,8 @@
   color: #545454; }
 
 .submitButton {
-  width: 19%;
-  margin: 0 5%;
+  width: 24%;
+  float: right;
   height: 40px;
   border-radius: 5px;
   border: none;

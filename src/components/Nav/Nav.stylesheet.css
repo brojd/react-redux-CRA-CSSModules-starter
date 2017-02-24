@@ -2,7 +2,8 @@
   margin: 50px auto;
   padding: 10px;
   width: 100%;
-  background: black; }
+  background: black;
+  box-sizing: border-box; }
 
 .link {
   box-sizing: border-box;

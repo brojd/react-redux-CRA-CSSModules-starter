@@ -1,4 +1,4 @@
-const initialState = 'SHOW_ALL';
+const initialState = 'ACTIVE';
 
 const counter = (state = initialState, action) => {
   switch (action.type) {

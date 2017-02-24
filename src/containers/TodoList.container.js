@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { addTodo, toggleTodo } from '../actions/todos';
 import { setFilter } from '../actions/todosFilter';
@@ -32,8 +32,11 @@ class TodoListContainer extends Component {
     return (
       <div>
         <AddTodoName onSubmit={this.handleSubmit} />
-        <TodoList todos={this.props.todos} onTodoClick={this.handleTodoClick}/>
-        <FilterTodos filters={filters} onFilterChosen={this.handleFilterChosen} />
+        <TodoList currentFilter={this.props.currentFilter}
+                  todos={this.props.todos}
+                  onTodoClick={this.handleTodoClick}/>
+        <FilterTodos filters={filters}
+                     onFilterChosen={this.handleFilterChosen} />
       </div>
     )
   }
@@ -41,7 +44,7 @@ class TodoListContainer extends Component {
 
 const filterTodos = (todos, filter) => {
   switch (filter) {
-    case 'SHOW_ALL':
+    case 'ALL':
       return todos;
     case 'COMPLETED':
       return todos.filter(todo => todo.completed);
@@ -54,7 +57,8 @@ const filterTodos = (todos, filter) => {
 
 const mapStateToProps = (state) => {
   return {
-    todos: filterTodos(state.todos, state.todosFilter)
+    todos: filterTodos(state.todos, state.todosFilter),
+    currentFilter: state.todosFilter
   }
 };
 
@@ -62,6 +66,11 @@ const mapDispatchToProps = {
   addTodo,
   toggleTodo,
   setFilter
+};
+
+TodoListContainer.propTypes = {
+  todos: PropTypes.array,
+  currentFilter: PropTypes.string
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoListContainer);
