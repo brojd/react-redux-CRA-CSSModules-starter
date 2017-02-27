@@ -12,6 +12,7 @@
 4. [react-router 3.0.2](https://github.com/ReactTraining/react-router)
 5. [Redux 3.6.0](http://redux.js.org/) - state container for JavaScript apps
 6. [Jest](https://facebook.github.io/jest/) - test runner
+7. [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) - to enable redux debugging (please install also [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) to use it)
 <br/><br/>
 
 ## Getting started
