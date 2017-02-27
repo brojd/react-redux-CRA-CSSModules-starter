@@ -1,7 +1,6 @@
 # react-redux-CRA-CSSModules-starter
 
 <p>Simple, well-structured, modern boilerplate for React&Redux apps </p>
-<br/><br/>
 
 ## Main features
 
@@ -23,7 +22,6 @@
 1. ```fork``` this repository
 2. ```git clone``` your fork
 3. Run ```npm  i``` in your project root
-
 
 ### Usage
 1. ```npm start``` to start development server
@@ -51,11 +49,9 @@ In the root folder you'll find ```.env``` file which is responsible for custom-r
 .
 .
 ```
-<br/><br/>
 
 ## License
 MIT
-<br/><br/>
 
 ## Author
 
