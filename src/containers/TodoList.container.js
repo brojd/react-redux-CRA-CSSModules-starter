@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { addTodo, toggleTodo } from '../actions/todos';
 import { setFilter } from '../actions/todosFilter';
+import { getCurrentFilter } from '../selectors/todosFilter.js';
+import { getFilteredTodos } from '../selectors/todos.js';
 import AddTodoName from '../components/AddTodo/AddTodo.component';
 import TodoList from '../components/TodoList/TodoList.component';
 import FilterTodos from '../components/FilterTodos/FilterTodos.component';
@@ -42,23 +44,10 @@ class TodoListContainer extends Component {
   }
 }
 
-const filterTodos = (todos, filter) => {
-  switch (filter) {
-    case 'ALL':
-      return todos;
-    case 'COMPLETED':
-      return todos.filter(todo => todo.completed);
-    case 'ACTIVE':
-      return todos.filter(todo => !todo.completed);
-    default:
-      return todos;
-  }
-};
-
 const mapStateToProps = (state) => {
   return {
-    todos: filterTodos(state.todos, state.todosFilter),
-    currentFilter: state.todosFilter
+    todos: getFilteredTodos(state),
+    currentFilter: getCurrentFilter(state)
   }
 };
 

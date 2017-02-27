@@ -10,9 +10,10 @@
 2. [custom-react-scripts](https://github.com/kitze/custom-react-scripts) - fork of CRA (↑) that enables you to turn on Sass, Less, Stylus or CSS Modules support without running ```npm run eject```
 3. [Autoprefixed CSS](https://github.com/postcss/autoprefixer) - it takes care of adding vendor prefixes for you
 4. [react-router 3.0.2](https://github.com/ReactTraining/react-router)
-5. [Redux 3.6.0](http://redux.js.org/) - state container for JavaScript apps
-6. [Jest](https://facebook.github.io/jest/) - test runner
-7. [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) - to enable redux debugging (please install also [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) to use it)
+5. [reselect 2.5.4](https://github.com/reactjs/reselect) - simple “selector” library for Redux
+6. [Redux 3.6.0](http://redux.js.org/) - state container for JavaScript apps
+7. [Jest](https://facebook.github.io/jest/) - test runner
+8. [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension) - to enable redux debugging (please install also [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) to use it)
 <br/><br/>
 
 ## Getting started
